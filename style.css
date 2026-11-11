@@ -1,0 +1,278 @@
+/* ===== Cores e medidas usadas no app inteiro ===== */
+:root {
+  --fundo: #0d0f12;
+  --cartao: #181c22;
+  --borda: #2a303a;
+  --texto: #f2f4f7;
+  --texto-fraco: #9aa4b2;
+  --destaque: #ff9f1a;
+  --perigo: #ff4d4d;
+  --alerta: #ffd23f;
+  --ok: #4cd97b;
+  --altura-abas: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--fundo);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  /* Fonte do próprio sistema: nada é baixado da internet */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* ===== Topo ===== */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  /* env(safe-area-inset-*) desvia do recorte/ilha do iPhone */
+  padding: calc(env(safe-area-inset-top) + 10px) calc(env(safe-area-inset-right) + 16px) 10px calc(env(safe-area-inset-left) + 16px);
+  background: var(--fundo);
+  border-bottom: 1px solid var(--borda);
+}
+.topo h1 { margin: 0; font-size: 26px; }
+.selo {
+  font-size: 12px;
+  color: var(--ok);
+  border: 1px solid var(--ok);
+  border-radius: 99px;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+/* ===== Área principal ===== */
+main {
+  padding: 14px calc(env(safe-area-inset-right) + 16px) calc(var(--altura-abas) + env(safe-area-inset-bottom) + 24px) calc(env(safe-area-inset-left) + 16px);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.tela { display: none; }
+.tela.ativa { display: block; }
+
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.cartao > strong { display: block; font-size: 18px; margin-bottom: 8px; }
+.cartao ul, .cartao ol { margin: 6px 0 0; padding-left: 22px; }
+.cartao li { margin-bottom: 6px; }
+
+.vazio, .nota { color: var(--texto-fraco); text-align: center; padding: 12px; }
+.nota { font-size: 14px; text-align: left; padding: 0 4px; }
+
+/* ===== Campos e botões (grandes, fáceis de tocar) ===== */
+label { display: block; flex: 1; min-width: 0; font-size: 14px; color: var(--texto-fraco); margin-top: 8px; }
+
+.campo {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 4px;
+  padding: 10px 14px;
+  /* 16px ou mais evita o zoom automático do iPhone ao tocar no campo */
+  font: inherit;
+  font-size: 18px;
+  color: var(--texto);
+  background: #0f1216;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+  color-scheme: dark;
+}
+.campo:focus { outline: 2px solid var(--destaque); outline-offset: 1px; }
+#busca { margin: 0 0 12px; }
+
+.linha { display: flex; gap: 10px; margin-top: 4px; align-items: flex-end; }
+
+.botao {
+  flex: 1;
+  min-height: 52px;
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--texto);
+  background: #262c36;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.botao:active { transform: scale(0.97); filter: brightness(1.2); }
+.botao.primario { background: var(--destaque); border-color: var(--destaque); color: #1a1200; margin-top: 12px; }
+#botao-cancelar { margin-top: 12px; }
+
+.botao.gigante {
+  display: block;
+  width: 100%;
+  min-height: 130px;
+  margin-bottom: 14px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+.botao.gigante small { display: block; font-size: 15px; font-weight: 400; margin-top: 6px; opacity: 0.8; }
+.botao.claro { background: #fff; color: #000; border-color: #fff; }
+.botao.perigo { background: var(--perigo); color: #fff; border-color: var(--perigo); }
+
+.contador { display: flex; gap: 8px; margin-top: 4px; }
+.contador .botao { flex: 0 0 64px; font-size: 28px; padding: 0; }
+.contador .campo { margin-top: 0; text-align: center; font-size: 24px; font-weight: 700; }
+
+/* ===== Manual ===== */
+.telefones .grade-telefones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.telefones a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--texto-fraco);
+  font-size: 12px;
+  background: #0f1216;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 8px 2px;
+}
+.telefones a b { display: block; font-size: 22px; color: var(--perigo); }
+
+.categoria { margin: 18px 4px 8px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--destaque); }
+
+details.artigo {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+details.artigo summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 44px 16px 14px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+details.artigo summary::-webkit-details-marker { display: none; }
+details.artigo summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--texto-fraco);
+}
+details.artigo[open] summary::after { content: "−"; }
+.artigo .corpo { padding: 0 14px 14px; }
+.artigo .corpo ol, .artigo .corpo ul { margin: 0; padding-left: 22px; }
+.artigo .corpo li { margin-bottom: 8px; }
+.artigo .atencao {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-left: 4px solid var(--perigo);
+  background: rgba(255, 77, 77, 0.1);
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
+}
+
+/* ===== Estoque ===== */
+.aviso { border-color: var(--alerta); }
+.aviso.grave { border-color: var(--perigo); }
+
+.item {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-left: 6px solid var(--borda);
+  border-radius: 16px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+.item.perto { border-left-color: var(--alerta); }
+.item.vencido { border-left-color: var(--perigo); }
+.item .nome { font-size: 19px; font-weight: 600; overflow-wrap: anywhere; }
+.item .validade { font-size: 15px; color: var(--texto-fraco); margin-top: 2px; }
+.item.perto .validade { color: var(--alerta); }
+.item.vencido .validade { color: var(--perigo); }
+.item .acoes { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+.item .acoes .botao { flex: 0 0 52px; padding: 0; font-size: 24px; }
+.item .acoes .botao.texto { flex: 1; font-size: 15px; font-weight: 500; }
+.item .qtd { flex: 0 0 56px; text-align: center; font-size: 24px; font-weight: 700; }
+
+/* ===== Calculadoras ===== */
+.numero-grande { font-size: 34px; font-weight: 800; color: var(--destaque); line-height: 1.1; margin: 4px 0; }
+.numero-grande small { font-size: 16px; font-weight: 400; color: var(--texto-fraco); }
+table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+td { padding: 9px 0; border-top: 1px solid var(--borda); }
+td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
+
+/* ===== Abas de baixo ===== */
+.abas {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 10;
+  display: flex;
+  background: #12151a;
+  border-top: 1px solid var(--borda);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+.aba {
+  flex: 1;
+  position: relative;
+  height: var(--altura-abas);
+  background: none;
+  border: 0;
+  color: var(--texto-fraco);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.aba span { display: block; font-size: 24px; line-height: 1.2; filter: grayscale(1); opacity: 0.7; }
+.aba.ativa { color: var(--destaque); font-weight: 700; }
+.aba.ativa span { filter: none; opacity: 1; }
+.aba i {
+  position: absolute;
+  top: 8px;
+  left: calc(50% + 10px);
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--perigo);
+}
+
+/* ===== Camada de luz (lanterna e SOS) ===== */
+#tela-luz {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#tela-luz[hidden] { display: none; }
+#tela-luz.apagada { background: #000; }
+#dica-luz { color: #888; font-size: 14px; }

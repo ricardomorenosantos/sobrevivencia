@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sobrevivência</title>
+  <meta name="description" content="Guia de sobrevivência offline: manual, estoque, calculadoras e SOS.">
+
+  <!-- Faz o app abrir em tela cheia quando instalado no iPhone -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sobrevivência">
+  <meta name="theme-color" content="#0d0f12">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1 id="titulo-tela">Manual</h1>
+    <span id="status-offline" class="selo" hidden>pronto para offline</span>
+  </header>
+
+  <main>
+
+    <!-- ========== TELA 1: MANUAL ========== -->
+    <section id="tela-manual" class="tela ativa">
+      <input id="busca" class="campo" type="search" placeholder="Buscar no manual (ex.: queimadura)"
+             autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Buscar no manual">
+      <div id="emergencia" class="cartao telefones">
+        <strong>Telefones de emergência</strong>
+        <div class="grade-telefones">
+          <a href="tel:192"><b>192</b>SAMU</a>
+          <a href="tel:193"><b>193</b>Bombeiros</a>
+          <a href="tel:190"><b>190</b>Polícia</a>
+          <a href="tel:199"><b>199</b>Defesa Civil</a>
+        </div>
+      </div>
+      <div id="lista-manual"></div>
+      <p id="manual-vazio" class="vazio" hidden>Nada encontrado. Tente outra palavra.</p>
+    </section>
+
+    <!-- ========== TELA 2: ESTOQUE ========== -->
+    <section id="tela-estoque" class="tela">
+      <div id="resumo-estoque" class="cartao aviso" hidden></div>
+
+      <form id="form-item" class="cartao" autocomplete="off">
+        <strong id="form-titulo">Adicionar item</strong>
+        <label>Nome
+          <input id="item-nome" class="campo" type="text" placeholder="Ex.: Arroz 5 kg" required maxlength="60">
+        </label>
+        <div class="linha">
+          <label>Quantidade
+            <input id="item-qtd" class="campo" type="number" inputmode="numeric" min="0" step="1" value="1" required>
+          </label>
+          <label>Validade (opcional)
+            <input id="item-validade" class="campo" type="date">
+          </label>
+        </div>
+        <div class="linha">
+          <button type="submit" class="botao primario" id="botao-salvar">Adicionar</button>
+          <button type="button" class="botao" id="botao-cancelar" hidden>Cancelar</button>
+        </div>
+      </form>
+
+      <div id="lista-estoque"></div>
+      <p id="estoque-vazio" class="vazio" hidden>Seu estoque está vazio. Adicione o primeiro item acima.</p>
+    </section>
+
+    <!-- ========== TELA 3: CALCULADORAS ========== -->
+    <section id="tela-calc" class="tela">
+      <div class="cartao">
+        <strong>Quantas pessoas e por quantos dias?</strong>
+        <div class="linha">
+          <label>Pessoas
+            <div class="contador">
+              <button type="button" class="botao" data-alvo="calc-pessoas" data-passo="-1" aria-label="Menos pessoas">−</button>
+              <input id="calc-pessoas" class="campo" type="number" inputmode="numeric" min="1" max="999" value="2">
+              <button type="button" class="botao" data-alvo="calc-pessoas" data-passo="1" aria-label="Mais pessoas">+</button>
+            </div>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Dias
+            <div class="contador">
+              <button type="button" class="botao" data-alvo="calc-dias" data-passo="-1" aria-label="Menos dias">−</button>
+              <input id="calc-dias" class="campo" type="number" inputmode="numeric" min="1" max="999" value="7">
+              <button type="button" class="botao" data-alvo="calc-dias" data-passo="1" aria-label="Mais dias">+</button>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="cartao">
+        <strong>💧 Água</strong>
+        <div id="resultado-agua"></div>
+      </div>
+
+      <div class="cartao">
+        <strong>🍚 Comida</strong>
+        <div id="resultado-comida"></div>
+      </div>
+
+      <p class="nota">Valores aproximados para adultos em repouso ou atividade leve. Calor forte, esforço físico,
+        gestantes, quem amamenta e pessoas doentes precisam de mais água.</p>
+    </section>
+
+    <!-- ========== TELA 4: SOS ========== -->
+    <section id="tela-sos" class="tela">
+      <button type="button" class="botao gigante claro" id="botao-lanterna">Tela branca<small>usa a tela como lanterna</small></button>
+      <button type="button" class="botao gigante perigo" id="botao-morse">Piscar SOS<small>· · ·  — — —  · · ·  em código Morse</small></button>
+      <div class="cartao">
+        <strong>Antes de usar</strong>
+        <ul>
+          <li>Um app web não consegue mexer no brilho do iPhone. <b>Suba o brilho no máximo você mesmo</b>:
+            deslize do canto superior direito para baixo e arraste a barra do sol até o topo.</li>
+          <li>Toque em qualquer lugar da tela para sair.</li>
+          <li>A tela consome bateria. Use só quando precisar.</li>
+          <li>SOS em Morse: 3 piscadas curtas, 3 longas, 3 curtas, pausa, e repete.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barra de navegação fixa embaixo -->
+  <nav class="abas" aria-label="Telas">
+    <button type="button" class="aba ativa" data-tela="manual"><span>📖</span>Manual</button>
+    <button type="button" class="aba" data-tela="estoque"><span>📦</span>Estoque<i id="bolinha-estoque" hidden></i></button>
+    <button type="button" class="aba" data-tela="calc"><span>🧮</span>Calcular</button>
+    <button type="button" class="aba" data-tela="sos"><span>🆘</span>SOS</button>
+  </nav>
+
+  <!-- Camada que cobre a tela inteira no modo lanterna / SOS -->
+  <div id="tela-luz" hidden><span id="dica-luz">toque para sair</span></div>
+
+  <script src="manual.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
