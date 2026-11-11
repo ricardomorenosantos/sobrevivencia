@@ -192,17 +192,35 @@ const MANUAL = [
   },
   {
     categoria: "Água",
-    titulo: "Onde achar e como guardar água",
-    palavras: "armazenar reserva caixa d'água chuva estoque galão",
+    titulo: "Onde achar água",
+    palavras: "fonte caixa d'água chuva rio poço orvalho coletar",
     passos: [
       "Ao primeiro sinal de falta, encha garrafas, panelas, baldes e a banheira.",
       "Fontes dentro de casa: caixa d'água, aquecedor (boiler), gelo do freezer.",
-      "Água da chuva: descarte os primeiros minutos, colete e trate antes de beber.",
-      "Rio, poço e lago: sempre coe e trate.",
-      "Guarde em recipiente próprio para alimento, limpo, tampado, longe do sol e de produtos químicos.",
-      "Anote a data. Troque a água guardada a cada 6 meses."
+      "Água da chuva: descarte os primeiros minutos, colete com lona ou calha limpa e trate antes de beber.",
+      "Rio, poço e lago: prefira água corrente e clara, pegue longe de esgoto e de animais mortos. Sempre coe e trate.",
+      "Orvalho: passe um pano limpo no capim de manhã cedo e torça num pote.",
+      "Na dúvida sobre a fonte, trate sempre."
     ],
-    atencao: "Nunca beba água do mar, de piscina, de radiador ou da caixa acoplada do vaso sanitário."
+    atencao: "Nunca beba água do mar, de piscina, de radiador ou da caixa acoplada do vaso sanitário. Não beba urina."
+  },
+  {
+    categoria: "Água",
+    titulo: "Armazenar água",
+    palavras: "guardar reserva estoque galão garrafa pet bombona validade trocar",
+    passos: [
+      "Meta: 4 litros por pessoa por dia. Comece com 3 dias e aumente até 2 semanas.",
+      "Use recipiente próprio para alimento: galão de água mineral, bombona nova, garrafa PET de refrigerante ou água.",
+      "Não reaproveite embalagem de leite, suco, produto de limpeza ou combustível.",
+      "Lave com água e sabão, enxágue, depois enxágue com 1 litro de água e 1 colher de chá de água sanitária. Escorra.",
+      "Encha até a boca com água tratada da torneira e feche bem.",
+      "Se a água não for tratada, coloque 2 gotas de água sanitária sem perfume por litro antes de fechar.",
+      "Escreva a data com caneta. Guarde em lugar fresco, escuro e longe de gasolina, tinta e veneno.",
+      "Troque a cada 6 meses. Água mineral lacrada vale até a data do rótulo.",
+      "Espalhe em vários recipientes menores: são mais fáceis de carregar e, se um contaminar, você não perde tudo.",
+      "Sirva sem encostar a mão ou a boca no gargalo. Depois de aberta, use em poucos dias."
+    ],
+    atencao: "Água guardada com cheiro, cor ou limo: trate de novo antes de beber ou use só para limpeza."
   },
 
   // ---------------- COMIDA ----------------
@@ -346,5 +364,159 @@ const MANUAL = [
       "Água sanitária sem perfume, sabão, papel higiênico, sacos de lixo.",
       "Cobertor, apito, canivete, fita adesiva."
     ]
+  },
+
+  // ---------------- FOGO E ABRIGO ----------------
+  {
+    categoria: "Fogo e abrigo",
+    titulo: "Fazer fogo",
+    palavras: "fogueira acender isca lenha graveto isqueiro fósforo aquecer",
+    passos: [
+      "Escolha chão de terra, longe de mato seco, barraca e galhos baixos. Limpe um círculo de 2 metros.",
+      "Junte tudo antes de acender, em três montes: isca, gravetos e lenha.",
+      "Isca (pega fogo com faísca): papel, algodão, capim bem seco, casca fina de árvore, serragem, fiapos de roupa.",
+      "Gravetos: secos, da grossura de um palito até a de um dedo. Se estala ao quebrar, está seco.",
+      "Lenha: da grossura do pulso para cima. Pegue galhos secos presos nas árvores, não os do chão úmido.",
+      "Monte a isca no centro e arme os gravetos em forma de cabana por cima, deixando uma abertura do lado do vento.",
+      "Acenda a isca por baixo. Sopre de leve na base.",
+      "Coloque lenha aos poucos, da mais fina para a mais grossa. Fogo precisa de ar: não abafe.",
+      "Chão molhado: faça uma base de galhos grossos ou pedras secas e acenda em cima.",
+      "Para apagar: jogue água, mexa as cinzas, jogue mais água. Só saia quando der para encostar a mão."
+    ],
+    atencao: "Sem isqueiro: encoste palha de aço nos dois polos de uma pilha, ou concentre o sol na isca com uma lupa. Nunca use gasolina ou álcool líquido para acender, e nunca faça fogo em lugar fechado."
+  },
+  {
+    categoria: "Fogo e abrigo",
+    titulo: "Manter o fogo e cozinhar",
+    palavras: "brasa fogueira panela chuva lenha molhada guardar fósforo",
+    passos: [
+      "Para cozinhar, espere formar brasa: esquenta mais por igual e solta menos fumaça.",
+      "Apoie a panela em três pedras secas ou em dois troncos verdes paralelos.",
+      "Pedra de rio ou molhada pode estourar com o calor. Use pedras secas.",
+      "Lenha úmida: tire a casca, rache ao meio e deixe secando em volta do fogo.",
+      "Para durar a noite: coloque dois troncos grossos encostados e deixe queimar devagar.",
+      "Guarde isca e fósforos secos em saco plástico ou pote fechado, sempre.",
+      "Uma parede de pedras ou troncos atrás do fogo joga o calor de volta para você."
+    ],
+    atencao: "Não durma com o fogo alto nem perto demais. Roupa sintética derrete e gruda na pele."
+  },
+  {
+    categoria: "Fogo e abrigo",
+    titulo: "Abrigo improvisado",
+    palavras: "barraca lona acampar dormir chuva vento frio proteção relento",
+    passos: [
+      "Comece antes de escurecer: montar abrigo leva mais de uma hora.",
+      "Lugar: terreno alto e plano, protegido do vento. Longe de leito de rio seco, encosta que pode deslizar e árvore com galho morto.",
+      "Olhe o chão: evite formigueiro, buraco de bicho e poça.",
+      "Com lona: amarre uma corda entre duas árvores na altura da cintura, jogue a lona por cima e prenda as pontas no chão com pedras ou estacas.",
+      "Sem lona: apoie um galho comprido numa forquilha, encoste galhos dos dois lados e cubra com uma camada grossa de folhas, de baixo para cima.",
+      "Faça pequeno: só o espaço do corpo. Abrigo pequeno segura melhor o calor.",
+      "O chão rouba mais calor que o ar: faça um colchão de folhas secas, capim ou papelão com um palmo de altura.",
+      "Deixe a entrada de costas para o vento.",
+      "Carro também serve de abrigo: abra uma fresta na janela para o ar circular."
+    ],
+    atencao: "Prioridades: sair da chuva e do vento, isolar do chão, depois pensar em conforto. Roupa molhada tira o calor do corpo muito rápido: troque ou seque."
+  },
+  {
+    categoria: "Fogo e abrigo",
+    titulo: "Abrigar-se dentro de casa",
+    palavras: "casa frio calor tempestade vendaval enchente cômodo seguro",
+    passos: [
+      "Frio: junte todos em um cômodo só, o menor. Feche portas, tampe frestas com panos, pendure cobertores nas janelas.",
+      "Frio: vista camadas, cubra a cabeça, durma junto com outras pessoas e isole o colchão do chão.",
+      "Calor: feche janelas e cortinas do lado do sol durante o dia e abra tudo à noite.",
+      "Calor: fique no cômodo mais baixo e sombreado, molhe o corpo e beba água mesmo sem sede.",
+      "Vendaval ou tempestade: fique longe de janelas, em cômodo interno, de preferência banheiro ou corredor.",
+      "Enchente: desligue a energia no disjuntor, suba para o andar mais alto e leve água, comida, lanterna e documentos.",
+      "Deixe sapato fechado, lanterna e a mochila de emergência perto da saída."
+    ],
+    atencao: "Não entre em água de enchente: esconde buracos, fios energizados e esgoto. 15 cm de correnteza derrubam uma pessoa."
+  },
+
+  // ---------------- HIGIENE ----------------
+  {
+    categoria: "Higiene",
+    titulo: "Higiene com pouca ou nenhuma água",
+    palavras: "banho lavar mãos álcool gel dentes sabão limpeza sem água",
+    passos: [
+      "Mãos são a prioridade: limpe antes de comer ou cozinhar e depois do banheiro.",
+      "Sem água: álcool em gel 70%, esfregando por 20 segundos até secar.",
+      "Com pouca água: fure a tampa de uma garrafa PET para fazer uma torneirinha. Um copo lava as mãos com sabão.",
+      "Sem sabão: esfregue as mãos com cinza fria de madeira e enxágue com um pouco de água.",
+      "Banho de pano: uma caneca de água, um pano e sabão. Ordem: rosto, axilas, virilha, pés.",
+      "Dentes: escove com um gole de água tratada. Sem pasta, use só a escova ou um pano limpo.",
+      "Troque meias e roupa de baixo sempre que der. Seque bem os pés e entre os dedos.",
+      "Lave louça com o mínimo: raspe os restos, esfregue com areia limpa ou cinza, enxágue com pouca água tratada.",
+      "Menstruação: absorventes, coletor ou panos limpos de algodão. Pano usado: lave, ferva e seque ao sol."
+    ],
+    atencao: "Em emergências, diarreia por mão suja adoece mais gente do que quase qualquer outra coisa. Não economize na limpeza das mãos."
+  },
+  {
+    categoria: "Higiene",
+    titulo: "Banheiro improvisado e lixo",
+    palavras: "vaso sanitário fezes latrina balde esgoto descarga lixo moscas",
+    passos: [
+      "Sem descarga em casa: forre o vaso (ou um balde com tampa) com dois sacos de lixo resistentes.",
+      "Depois de cada uso, cubra com serragem, cinza, terra seca, areia de gato ou jornal picado. Tira o cheiro e afasta moscas.",
+      "Quando encher até a metade, amarre bem os sacos e guarde fora de casa, em lixeira tampada.",
+      "Se tiver pouca água, uma descarga com balde resolve: jogue de uma vez uns 6 litros de água usada (de banho ou louça).",
+      "Ao ar livre: cave um buraco de um palmo de fundura, a pelo menos 60 passos de rio, poço e acampamento. Cubra com terra.",
+      "Grupo parado por dias: cave uma vala funda (dois palmos ou mais) e jogue terra depois de cada uso.",
+      "Lixo: separe o que apodrece, feche bem e mantenha longe de onde se dorme e se cozinha.",
+      "Lave ou desinfete as mãos sempre depois."
+    ],
+    atencao: "Fezes perto da água de beber espalham doença para todo mundo. Mantenha distância e fique rio abaixo do ponto de coleta."
+  },
+
+  // ---------------- SINALIZAÇÃO E ORIENTAÇÃO ----------------
+  {
+    categoria: "Sinalização e orientação",
+    titulo: "Pedir socorro: sinais",
+    palavras: "resgate sinalizar apito espelho fumaça fogueira sos helicóptero avião perdido",
+    passos: [
+      "Regra geral: três de qualquer coisa é pedido de socorro. Três apitos, três fogueiras, três piscadas de lanterna.",
+      "Apito: três sopros fortes, pausa de um minuto, repita. Cansa menos e vai mais longe que gritar.",
+      "Espelho (ou tampa de lata, tela do celular): reflita o sol na direção de aviões, barcos ou pessoas. É visto a quilômetros.",
+      "Para mirar o espelho: estique o braço, faça um V com dois dedos, enquadre o alvo no V e jogue o reflexo nos dedos.",
+      "De dia, fumaça: fogo com folhas verdes ou capim úmido por cima faz fumaça branca e grossa.",
+      "De noite, fogo: três fogueiras em triângulo ou em linha, com uns 20 passos entre elas.",
+      "No chão, para avião: letras de pelo menos 3 metros, em clareira, com cor que contraste (roupas, pedras, galhos). SOS, ou V (preciso de ajuda), ou X (preciso de médico).",
+      "Lanterna ou tela do celular à noite: use o modo SOS deste app.",
+      "Pano de cor viva no ponto mais alto ajuda a marcar onde você está."
+    ],
+    atencao: "Se estiver perdido, pare e fique onde está, de preferência em lugar aberto. Quem fica parado é achado mais rápido. Avise sempre alguém do seu trajeto antes de sair."
+  },
+  {
+    categoria: "Sinalização e orientação",
+    titulo: "Achar o norte sem bússola",
+    palavras: "orientação direção sol sombra cruzeiro do sul estrelas leste oeste perdido navegação",
+    passos: [
+      "O sol nasce do lado leste e se põe do lado oeste. De manhã cedo ele está a leste; no fim da tarde, a oeste.",
+      "Método da sombra (o mais confiável de dia): finque uma vara reta de 1 metro em chão plano.",
+      "Marque com uma pedra a ponta da sombra. Espere 15 a 20 minutos e marque a ponta de novo.",
+      "A primeira marca é o oeste, a segunda é o leste. Uma linha cruzando essa no meio aponta norte–sul.",
+      "Fique com a primeira marca (oeste) à esquerda e a segunda (leste) à direita: você está olhando para o norte.",
+      "À noite, no Brasil: ache o Cruzeiro do Sul (quatro estrelas em cruz, com uma menor ao lado).",
+      "Estique o braço maior da cruz, a partir do pé, 4 vezes e meia o tamanho dele. Desça desse ponto reto até o horizonte: ali é o sul.",
+      "De frente para o sul, o norte fica atrás, o leste à esquerda e o oeste à direita.",
+      "A lua também nasce no leste e se põe no oeste, como o sol."
+    ],
+    atencao: "Musgo em árvore e truque do relógio não são confiáveis no Brasil. Céu fechado: fique parado ou siga uma referência fixa."
+  },
+  {
+    categoria: "Sinalização e orientação",
+    titulo: "Andar sem se perder",
+    palavras: "trilha mata caminhar rio seguir marcar caminho mapa rumo",
+    passos: [
+      "Antes de sair, decida para onde vai e por quê. Sem motivo forte, ficar parado é mais seguro.",
+      "Escolha uma referência distante na direção certa (morro, árvore grande, torre) e ande até ela. Chegando, escolha a próxima.",
+      "Sem referência, as pessoas andam em círculo. Confira a direção a cada poucos minutos.",
+      "Marque o caminho: galhos quebrados, pedras empilhadas, tiras de pano. Ajuda você a voltar e ajuda quem procura.",
+      "Seguir um rio para baixo costuma levar a estradas e casas. Ande pela margem, não por dentro.",
+      "Estrada, linha de energia ou cerca: siga, sempre levam a alguém.",
+      "Ande de dia. Pare duas horas antes de escurecer para montar abrigo e fogo.",
+      "Conte o tempo de caminhada e anote as mudanças de direção."
+    ],
+    atencao: "Leste à esquerda e oeste à direita só vale olhando para o sul. Confira duas vezes antes de andar muito."
   }
 ];

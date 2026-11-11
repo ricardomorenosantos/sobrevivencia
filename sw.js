@@ -2,7 +2,7 @@
 //
 // IMPORTANTE: sempre que você mudar qualquer arquivo do app, aumente este número
 // (v1 -> v2 -> v3...). É assim que o iPhone percebe que existe versão nova.
-const VERSAO = "v1";
+const VERSAO = "v2";
 const CACHE = "sobrevivencia-" + VERSAO;
 
 // Lista de tudo que o app precisa. Arquivo novo? Adicione aqui.
@@ -13,9 +13,9 @@ const ARQUIVOS = [
   "manual.js",
   "app.js",
   "manifest.webmanifest",
-  "icons/icon-180.png",
-  "icons/icon-192.png",
-  "icons/icon-512.png"
+  "icons/notas-180.png",
+  "icons/notas-192.png",
+  "icons/notas-512.png"
 ];
 
 // Instalação: baixa e guarda todos os arquivos.
